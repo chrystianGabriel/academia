@@ -1,0 +1,37 @@
+<div class="row">
+	<div class="col-sm-4">
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="basic-addon1"><i class="material-icons">search</i></span>
+			</div>
+			<input type="text" class="form-control" placeholder="Buscar Aparelho por Nome" aria-label="Username" aria-describedby="basic-addon1" (change)="buscarAparelho()" [(ngModel)]="textoBusca">
+		</div>
+	</div>
+	<div class="col-sm-2">
+		<button class="btn btn-success" data-toggle="modal" data-target="#modalCadastroAparelho">
+			Cadastrar Aparelho
+		</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12 col-12">
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Codigo</th>
+					<th scope="col">Nome</th>
+					<th scope="col">Custo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let aparelho of aparelhos">
+					<th scope="col">{{aparelho.codigo}}</th>
+					<th scope="col">{{aparelho.nome}}</th>
+					<th scope="col">{{aparelho.custo}}</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<cadastrar-aparelhos></cadastrar-aparelhos>

@@ -1,0 +1,46 @@
+<div class="modal" role="dialog" id="modalCadastroPagamento" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-6">
+						<label for="">Nome Cliente</label>
+						<select name="" id="" class="form-control" (change)="mudarCliente()" id="clientes">
+							<option value="">Selecione o Cliente</option>
+							<option value="{{cliente.cpf}}" *ngFor="let cliente of clientes">{{cliente.nome}}</option>
+						</select>
+					</div>
+					<div class="col-sm-6">
+						<label for="">Data Pagamento</label>
+						<input type="date" class="form-control">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<label for="">Metodo de Pagamento</label>
+						<select name="" id="" class="form-control" [(ngModel)]="pagamento.metodo_pgto">
+							<option value="A">A - A Vista</option>
+							<option value="C">C - Credito</option>
+							<option value="D">D - Debito</option>
+						</select>
+					</div>
+					<div class="col-sm-6">
+						<label for="">Valor a Pagar</label>
+						<ul>
+							<li>{{valorTotal}}</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-6" style="padding:15px;">
+						<button class="btn btn-success"  (click)="cadastrarPagamentos()">Cadastrar</button>
+						<button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+					</div>
+				</div>
+				
+
+
+			</div>
+		</div>
+	</div>
+</div>

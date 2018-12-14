@@ -1,0 +1,21 @@
+
+<div class="row">
+	<div class="col-sm-12 col-12">
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Codigo</th>
+					<th scope="col">Nome</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let exercicio of exercicios">
+					<th scope="col">{{exercicio.codigo}}</th>
+					<th scope="col">{{exercicio.nome}}</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<cadastrar-exercicios></cadastrar-exercicios>

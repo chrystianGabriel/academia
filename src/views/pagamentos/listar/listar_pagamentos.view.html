@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="col-sm-4">
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="basic-addon1"><i class="material-icons">search</i></span>
+			</div>
+			<input type="text" class="form-control" placeholder="Buscar Cliente" aria-label="Username" aria-describedby="basic-addon1" (change)="buscarPagamento()" [(ngModel)]="textoBusca">
+		</div>
+	</div>
+	<div class="col-sm-2">
+		<button class="btn btn-success" data-toggle="modal" data-target="#modalCadastroPagamento">
+			Cadastrar Pagamento
+		</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12 col-12">
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Nome</th>
+					<th scope="col">Data</th>
+					<th scope="col">Metodo</th>
+					<th scope="col">Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let pagamento of pagamentos">
+					<th scope="col">{{pagamento.cliente.nome}}</th>
+					<th scope="col">{{pagamento.data}}</th>
+					<th scope="col">{{pagamento.metodo_pgto}}</th>
+					<th scope="col">{{pagamento.valorTotal}}</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<cadastrar-pagamentos></cadastrar-pagamentos>

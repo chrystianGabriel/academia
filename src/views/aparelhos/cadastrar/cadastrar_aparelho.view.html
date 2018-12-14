@@ -1,0 +1,30 @@
+
+
+<div class="modal" role="dialog" id="modalCadastroAparelho" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-4 col-4">
+						<label for="codigo">Codigo</label>
+						<input type="text" id="codigo" class="form-control" [(ngModel)]="aparelho.codigo" #ctrl="ngModel">
+					</div>
+					<div class="col-sm-6 col-4">
+						<label for="nome">Nome</label>
+						<input type="text" id="nome" class="form-control" [(ngModel)]="aparelho.nome" #ctrl="ngModel">
+					</div>
+					<div class="col-sm-2 col-4">
+						<label for="preco">Preço</label>
+						<input type="text" id="preco" class="form-control" [(ngModel)]="aparelho.custo" #ctrl="ngModel">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-6" style="padding:15px;">
+						<button class="btn btn-success" (click)="cadastrarAparelhos()" data-dismiss="modal">Cadastrar</button>
+						<button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
